@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;   
+    scroll-behavior: smooth; 
+}
+:root{
+    --main-color:#F23005;
+    --brown-color:#8C2703;
+    --light-brown-color:#ce3e0af5;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-color);    
+}
+
+header{
+    width: 100%;
+    height: 100vh; 
+    background: white;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 93%); 
+    margin-bottom: 5rem;
+}
+
+    .header_main_container{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;        
+        height: 6rem;
+        padding: 0 4rem; 
+        gap:2rem;                           
+    } 
+
+        #logo{            
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--main-color);
+        }
+        #logo:hover{  
+            cursor: pointer;            
+            color: var(--brown-color);
+        }
+        .nav__label{
+            display: none;
+        }
+        #menu_click{
+            display: none;
+        }
+        
+        .ul_hero{
+            list-style: none;                        
+        }
+            .li_hero{
+                margin-left: 2rem; 
+                display: inline-block;                                     
+            }          
+                .a_hero{
+                    text-decoration: none;
+                    color: var(--main-color);
+                    font-size: 2rem;
+                    font-weight: 500; 
+                    padding: 0.5rem;
+                    box-shadow: inset 0 0 0 var(--main-color);                  
+                    transition:  color .9s;             
+                }
+                .a_hero:hover:hover{      
+                    color: white;          
+                    box-shadow: inset 200px 0 0 var(--main-color);
+                    border-radius: 3px;                                                
+                }
+    .header_second_container{        
+        width: 100%;
+        height: calc(100% - 6rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4rem;        
+    }
+        .empresa_hero{            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;                    
+        }
+            .descripcion_empresa{                
+            }
+                .descripcion_empresa h3{
+                    font-size: 2.5rem;
+                    color: var(--brown-color);
+                    font-weight: 800;                   
+                }
+                .descripcion_empresa h2{
+                    font-size: 6rem;
+                    color: var(--main-color);                   
+                }
+                .descripcion_empresa p{
+                    font-size: 2rem;
+                    color: var(--brown-color);
+                    font-weight: 700;                    
+                }             
+            #img_main{
+                width: 50%;                           
+            }
+
+/* ------------------------------------------------------------- Main --------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------- Portafolio --------------------------------------------------------------------- */
+#portafolio_sec{  
+    padding: 0 4rem; 
+    margin-bottom: 16rem;  
+}
+    #portafolio_sec h1{
+        color: white;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    #portafolio_sec h1::after{
+        content: "";
+        display: block;
+        background: white;
+        width: inherit;
+        margin-top: 0.2rem;
+        height: 1px;    
+    }
+    .proyectos{        
+        display: grid;
+        gap:10px;
+        grid-template-columns: repeat(auto-fit,minmax(35em,1fr));/* autofit: rellena de manera automatica todas las columnas */
+                                                                  /* el width minimo que tendran sera 150px */
+                                                                  /* el with maximo sera 1fr el cual ocupara todo lo que pueda ocupar para llenar espacio */
+    
+    }
+        .proyecto{ 
+            color: white;            
+            height: 300px;
+            /* background: gray; */
+        }
+            .proyecto img{
+               width: 100%;
+               height: 100%;
+               clip-path: inset(0);               
+               transition: all 1s; 
+               background-color: rgba(0,0,0,0.8);
+               filter:brightness(1);
+               
+            }
+            .proyecto img:hover{
+                cursor: pointer;
+                clip-path: inset(20px round 0 100px 0 100px);
+                filter:brightness(0.4);                
+            }
+  
+/* ------------------------------------------------------------- Portafolio --------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------- Servicios --------------------------------------------------------------------- */
+#servicios_sec{
+    width: 100%;
+    background-color: white;
+    padding: 9rem 4rem 9em 4rem;   
+}
+#servicios_sec h2{
+      font-size: 5rem;
+      color: var(--main-color);
+      text-align: center;
+      margin-bottom: 3rem;
+}
+#servicios_sec > h2::after{
+    content: "";
+    display: block;
+    background: var(--brown-color);
+    width: inherit;
+    margin-top: 0.2rem;
+    height: 1px;    
+}
+   #servicios_sec p{
+      font-size: 2rem;
+      color: var(--brown-color);
+      font-weight: 700; 
+      text-align: center;
+      margin-bottom: 6rem;
+   }
+   .servicios{ 
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 1rem;
+      flex-wrap: wrap;  /* cuando los elementos no entren en una sola linea pasa a la siguiente linea */       
+        
+        
+   }
+      .servicio{
+           height: 30rem;           
+           width: 30rem;
+           min-width: 156px;
+           background: #eaeaea47;
+           padding: 2rem;  
+           border-radius: 6rem 6rem 0 0;                
+      }
+        .servicio #servicio_name{
+            color: var(--main-color);
+            font-size: 2.7rem;
+        }
+        .servicio ul li{
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+
+        }
+/* ------------------------------------------------------------- Servicios --------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------- Servicios --------------------------------------------------------------------- */
+#nosotros_sec{
+    width: 100%;
+    padding: 8rem 4rem 14rem 4rem;
+    color: var(--main-color);
+    background: white;
+    position: relative;
+    top: -1px;
+}
+    #nosotros_sec h2{
+        color: var(--main-color);
+        text-align: center;
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+    #nosotros_sec h2::after{
+        content: "";
+        display: block;
+        background: var(--main-color);
+        width: inherit;
+        margin-top: 0.2rem;
+        height: 1px;    
+    }
+    #nosotros_sec p{
+       font-size: 2rem;
+       color: var(--brown-color);
+       font-weight: 700; 
+       text-align: center;
+       margin-bottom: 6rem;               
+    }
+
+/* ------------------------------------------------------------- Servicios --------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------- Unete ------------------------------------------------------------------------ */
+#unete_sec{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4rem 14rem 4rem;
+    align-items: center;
+    gap: 1rem; 
+    position: relative;
+    top: -2px;  
+}
+    #unete_sec h2{
+        font-size: 5rem;
+        font-weight: 500;
+        color: var(--main-color);
+        width:55%;        
+    }
+    #unete_container{        
+        width: 45%;
+        color: var(--brown-color);        
+    }
+        #unete_container h3{
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;            
+        }
+        #unete_container p{
+            font-size: 1.7rem; 
+            margin-bottom: 6rem;       
+        }
+        #unete_container a{
+            background: var(--brown-color);
+            color: white;
+            padding: 1.8rem;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        #unete_container a:hover{
+            background: var(--light-brown-color);
+        }
+/* ------------------------------------------------------------- Unete ------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------- Main --------------------------------------------------------------------- */
+ 
+/* --------------------------------------------------------------Footer--------------------------------------------------------------------- */
+footer{    
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+#top{
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    background-color: var(--orange-color);
+    font-size: 7rem;
+    color: black;
+    display: none;
+}
+/* --------------------------------------------------------------Footer--------------------------------------------------------------------- */
+
+@media (max-width: 800px){
+    html{
+        font-size: 7px;
+    }      
+}
+@media (max-width: 700px){
+    .ul_hero{
+        display: flex;
+        position: fixed;
+        background: var(--main-color);        
+        top:6rem; 
+        height: 100vh;/* hace que me tome el alto de toda la pantalla */ 
+        width: 100%;
+        left: 0;
+        justify-content:space-around;
+        flex-direction: column;        
+        align-items:center;
+        clip-path: circle(0% at 99% 0);
+        transition: clip-path 1s ease-in-out;       
+    }
+    .nav_input:checked + .ul_hero{        
+        clip-path: circle(100% at center);        
+    }
+        .a_hero{
+            color: white;
+        }
+    .nav__label{
+        display: initial;
+    }
+        #menu{
+            display: flex;
+            font-size: 5rem;
+            color: var(--main-color);
+        }
+
+    .empresa_hero{
+        flex-direction: column-reverse;        
+        height: 70%;
+    }
+        .descripcion_empresa{        
+            text-align: center;
+        }
+            #img_main{             
+                width: 100%;                       
+            }
+
+    .servicio{
+        flex-grow: 1;/* si algun elemento se sale de su linea toma el 100% */
+    }
+    #unete_sec{
+        flex-direction: column;
+        justify-content: center;
+        gap:3rem;        
+    }
+       #unete_sec h2{
+           width: 100%;
+           text-align: center;
+           font-size: 3.5rem;           
+       }
+       #unete_container{
+           text-align: center;
+           width: 100%;          
+       }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
